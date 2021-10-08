@@ -1,7 +1,12 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import FetchAPI from '../API/API';
 
 export default class SearchBar extends Component {
+  static propTypes = {
+    onSubmit: PropTypes.func,
+  };
+
   state = {
     searchInput: '',
   };

@@ -1,8 +1,14 @@
 import { Component } from 'react';
-import FetchAPI from '../API/API';
+import PropTypes from 'prop-types';
 import LoaderCircle from '../Loader/Loader';
+import FetchAPI from '../API/API';
 
 export default class ButtonLoadMore extends Component {
+  static propTypes = {
+    searchInput: PropTypes.string,
+    loadMore: PropTypes.func,
+  };
+
   state = {
     page: 1,
     loader: false,
